@@ -15,12 +15,12 @@ public class TC_LoginPage_001 extends BaseClass {
 		 
 		 logger.info("Enter user id");
 		 lp.userid(username);
-		 Thread.sleep(5000);
+		 Thread.sleep(10000);
 		 logger.info("Enter password");
 		 lp.password(password);
 		 lp.clickbtn();
-		 logger.info("Enter submit ");
-		 Thread.sleep(3000);
+		 logger.info("Enter submit button");
+		 Thread.sleep(5000);
 		 
 	}
 
