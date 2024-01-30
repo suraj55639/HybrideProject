@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-10T12:48:07 IST" name="Suite" finished-at="2024-01-10T12:48:19 IST" duration-ms="11598">
+  <suite started-at="2024-01-30T15:59:10 IST" name="Suite" finished-at="2024-01-30T15:59:29 IST" duration-ms="18826">
     <groups>
     </groups>
-    <test started-at="2024-01-10T12:48:07 IST" name="Test" finished-at="2024-01-10T12:48:19 IST" duration-ms="11598">
+    <test started-at="2024-01-30T15:59:10 IST" name="Test" finished-at="2024-01-30T15:59:29 IST" duration-ms="18826">
       <class name="com.Hybride.testcase.TC_LoginPage_001">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Hybride.testcase.TC_LoginPage_001@cc43f62]" started-at="2024-01-10T12:48:07 IST" name="setUp" finished-at="2024-01-10T12:48:17 IST" duration-ms="10269" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Hybride.testcase.TC_LoginPage_001@5b799640]" started-at="2024-01-30T15:59:10 IST" name="setUp" finished-at="2024-01-30T15:59:23 IST" duration-ms="12441" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:com.Hybride.testcase.TC_LoginPage_001@cc43f62]" started-at="2024-01-10T12:48:17 IST" name="loginTest" finished-at="2024-01-10T12:48:17 IST" duration-ms="10" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="loginTest()[pri:0, instance:com.Hybride.testcase.TC_LoginPage_001@5b799640]" started-at="2024-01-30T15:59:23 IST" name="loginTest" finished-at="2024-01-30T15:59:27 IST" duration-ms="4106" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "this.userid" is null]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "this.userid" is null
-at com.Hybride.pageObject.LoginPage.userid(LoginPage.java:33)
-at com.Hybride.testcase.TC_LoginPage_001.loginTest(TC_LoginPage_001.java:17)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.Hybride.testcase.TC_LoginPage_001.loginTest(TC_LoginPage_001.java:35)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
@@ -39,7 +42,7 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:819)
 at org.testng.TestRunner.run(TestRunner.java:619)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -57,11 +60,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Hybride.testcase.TC_LoginPage_001@cc43f62]" started-at="2024-01-10T12:48:17 IST" name="tearDown" finished-at="2024-01-10T12:48:19 IST" duration-ms="1242" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Hybride.testcase.TC_LoginPage_001@5b799640]" started-at="2024-01-30T15:59:27 IST" name="tearDown" finished-at="2024-01-30T15:59:29 IST" duration-ms="1720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

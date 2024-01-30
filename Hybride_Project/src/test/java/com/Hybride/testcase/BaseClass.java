@@ -1,8 +1,16 @@
 package com.Hybride.testcase;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,6 +25,7 @@ import com.Hybride.utilities.Readconfig;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
+	public static String ScreeShotFolder;
 	Readconfig rc=new Readconfig();
 	public  String baseUrl=rc.getApplicationUrl();
 	public  String username=rc.getusername();
@@ -54,5 +63,23 @@ public class BaseClass {
 	public void tearDown()
 	{
 		driver.quit();
+	}
+	
+	public void screenShot(String filename)
+	{
+		if(ScreeShotFolder == null) {
+			LocalDateTime myDateObj = LocalDateTime.now();
+			DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
+			ScreeShotFolder = myDateObj.format(myFormatObj);
+		}		
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File src=ts.getScreenshotAs(OutputType.FILE);
+		File trg= new File("./ScreeShot/"+ScreeShotFolder+"/"+filename);
+		try {
+			FileUtils.copyFile(src, trg);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.err.println("ScreenShot Successfully");
 	}
 }
