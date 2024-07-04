@@ -5,15 +5,15 @@
     <listener class-name="com.Hybride.utilities.ReportLisetner"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.Hybride.testcase.TC_LoginPage_001">
+      <class name="com.Hybride.testcase.Tc_LoginDDT_002">
         <methods>
-          <include name="loginTest"/>
           <include name="tearDown"/>
+          <include name="loginDDT" invocation-numbers="0 1 2 3 4"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.Hybride.testcase.TC_LoginPage_001 -->
+      </class> <!-- com.Hybride.testcase.Tc_LoginDDT_002 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

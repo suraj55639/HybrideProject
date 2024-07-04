@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -25,13 +26,14 @@ import com.Hybride.utilities.Readconfig;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	public static String ScreeShotFolder;
+	
 	Readconfig rc=new Readconfig();
 	public  String baseUrl=rc.getApplicationUrl();
 	public  String username=rc.getusername();
 	public  String password=rc.getuserpass();
 	public  static  WebDriver driver;
 	public  static Logger logger;
+	public static String ScreeShotFolder;
 	
 	@Parameters("browser")
 	@BeforeClass
@@ -80,6 +82,16 @@ public class BaseClass {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.err.println("ScreenShot Successfully");
+		System.out.println("ScreenShot Successfully");
+	}
+	public String randomestring()
+	{
+		String generatedstring=RandomStringUtils.randomAlphabetic(8);
+		return(generatedstring);
+	}
+	
+	public static String randomeNum() {
+		String generatedString2 = RandomStringUtils.randomNumeric(4);
+		return (generatedString2);
 	}
 }

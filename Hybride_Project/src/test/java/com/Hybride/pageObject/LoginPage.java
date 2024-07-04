@@ -16,9 +16,9 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(name="uid")
+	 @FindBy(name="uid")
 	@CacheLookup
-	WebElement userid;
+	private WebElement userid;
 	
 	@FindBy(name="password")
 	@CacheLookup
@@ -27,6 +27,10 @@ public class LoginPage {
 	@FindBy(name="btnLogin")
 	@CacheLookup
 	WebElement loginbtn;
+	
+	@FindBy(xpath="/html/body/div[3]/div/ul/li[15]/a")
+	@CacheLookup
+	WebElement lnkLogout;
 	
 	public void userid(String username)
 	{
@@ -43,6 +47,10 @@ public class LoginPage {
 		loginbtn.click();
 	}
 	
+	public void clickLogout()
+	{
+		lnkLogout.click();
+	}
 	
 	
 	

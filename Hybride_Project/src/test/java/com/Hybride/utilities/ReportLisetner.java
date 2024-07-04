@@ -1,4 +1,4 @@
-package com.Hybride.utilities;
+ package com.Hybride.utilities;
 
 
 	//Listener class used to generate Extent reports
@@ -12,8 +12,8 @@ package com.Hybride.utilities;
 	import org.testng.ITestListener;
 	import org.testng.ITestResult;
 
-import com.Hybride.testcase.BaseClass;
-import com.aventstack.extentreports.ExtentReports;
+	import com.Hybride.testcase.BaseClass;
+	import com.aventstack.extentreports.ExtentReports;
 	import com.aventstack.extentreports.ExtentTest;
 	import com.aventstack.extentreports.Status;
 	import com.aventstack.extentreports.markuputils.ExtentColor;
@@ -42,7 +42,7 @@ import com.aventstack.extentreports.ExtentReports;
 			extent.attachReporter(sparkReporter);
 			extent.setSystemInfo("Host name","localhost");
 			extent.setSystemInfo("Environemnt","QA");
-			extent.setSystemInfo("user","pavan");
+			extent.setSystemInfo("user","Suraj");
 			
 			sparkReporter.config().setDocumentTitle("InetBanking Test Project"); // Tile of report
 			sparkReporter.config().setReportName("Functional Test Automation Report"); // name of the report

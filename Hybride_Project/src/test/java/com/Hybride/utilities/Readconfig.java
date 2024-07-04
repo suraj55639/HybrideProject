@@ -26,7 +26,7 @@ public class Readconfig {
 	
 	public String  getApplicationUrl() {
 		String url=pro.getProperty("baseUrl");
-		return url;
+		return url; 
 	}
 	
 	public String  getusername() {
